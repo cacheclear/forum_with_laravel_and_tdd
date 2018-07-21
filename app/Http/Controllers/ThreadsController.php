@@ -48,7 +48,7 @@ class ThreadsController extends Controller
      */
     public function show(Thread $thread)
     {
-        //
+        return $thread;
     }
 
     /**
