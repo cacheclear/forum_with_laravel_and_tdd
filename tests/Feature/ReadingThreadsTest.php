@@ -6,7 +6,7 @@ use App\Thread;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class ThreadsTest extends TestCase
+class ReadingThreadsTest extends TestCase
 {
     use DatabaseMigrations;
 
@@ -23,7 +23,7 @@ class ThreadsTest extends TestCase
     public function a_user_can_browse_a_single_thread()
     {
         $thread = factory(Thread::class)->create();
-        
+
         $response = $this->get('/threads/' . $thread->id);
         $response->assertSee($thread->title);
     }
