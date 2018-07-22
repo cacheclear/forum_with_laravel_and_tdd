@@ -48,7 +48,6 @@ class ThreadsController extends Controller
      */
     public function show(Thread $thread)
     {
-       //dd($thread->replies);
         return view('threads.show', compact('thread'));
     }
 
