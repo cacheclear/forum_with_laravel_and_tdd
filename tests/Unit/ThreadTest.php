@@ -41,4 +41,15 @@ class ThreadTest extends TestCase
         //Assert
         $this->assertInstanceOf(User::class, $creator);
     }
+
+    /** @test */
+    public function a_thread_can_add_a_reply()
+    {
+        $this->thread->addReply([
+            'body' => 'Foobar',
+            'user_id' => 1,
+        ]);
+
+        $this->assertCount(1, $this->thread->replies);
+    }
 }
