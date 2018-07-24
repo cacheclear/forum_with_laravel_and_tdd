@@ -25,9 +25,8 @@ class CreateThreadsTest extends TestCase
         $this->post('/threads', $thread->toArray());
 
         //Assert
-        $this->get($thread->path());
-
-        $this->assertSee($thread->title)
+        $this->get($thread->path())
+            ->assertSee($thread->title)
             ->assertSee($thread->body);
     }
 }
