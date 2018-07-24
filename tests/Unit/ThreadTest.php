@@ -21,7 +21,7 @@ class ThreadTest extends TestCase
         parent::setUp();
 
         //Arrange
-        $this->thread = factory(Thread::class)->create();
+        $this->thread = create(Thread::class);
     }
 
     /** @test */

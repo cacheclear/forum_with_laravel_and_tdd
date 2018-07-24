@@ -21,7 +21,7 @@ class ParticipateInForumTest extends TestCase
     {
         parent::setUp();
 
-        $this->thread = $thread = factory(Thread::class)->create();
+        $this->thread = create(Thread::class);
     }
 
     /** @test */
